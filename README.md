@@ -3,17 +3,18 @@
 In this project multiple agents are created to fetch news from Reddit's subreddits baswd on user's query in natural language, summarized in the newscaster format and the final summarized news is returned to the user. Multimodality is also integrated in this project wehre, user can hear the summarized news in English instead of just reading the text information. This project is built using Google's **Agent Development Kit** which was recently released for building agents from scratch and for easy deployement and for production and, using **Model Context Protocol** released by Anthropic recently for effective communication within agents and between multiple tools and agents.
 
 # General Setup
-Clone the repository:
+## Clone the repository:
 
 git clone https://github.com/RishabhMathur06/Reddit-News-Agent-System-Using-MCP-and-ADK
+
 cd agents
 
-# Create and activate a virtual environment (Recommended):
+## Create and activate a virtual environment (Recommended):
 
 python -m venv .venv
-# On Windows
+### On Windows
 .\.venv\Scripts\activate
-# On macOS/Linux
+### On macOS/Linux
 source .venv/bin/activate
 
 # Install general dependencies:
