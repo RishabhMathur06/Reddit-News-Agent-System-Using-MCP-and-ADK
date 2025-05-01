@@ -49,9 +49,16 @@ In this project multiple agents are created to fetch news from Reddit's subreddi
       ```bash
       cp ../.env.example .env
       ```
-    - Edit the `.env` file and add your Google AI API Key, Reddit Credentials and Elevenlabs API Key. You can obtain Google's Gemini API Key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    - Edit the `.env` file and add your GoogleAI API Key, Reddit Credentials and Elevenlabs API Key.
       ```dotenv
-      GOOGLE_API_KEY=YOUR_API_KEY_HERE
+      GOOGLE_GENAI_USE_VERTEXAI="False"
+      GOOGLE_API_KEY="<Gemini API Key>"
+    
+      REDDIT_CLIENT_ID="<Reddit Client ID>"
+      REDDIT_CLIENT_SECRET="<Reddit Client Secret Key>"
+      REDDIT_USER_AGENT="GameDevNewsScout/0.1 by <your user-id>" # This can be configured. 
+    
+      ELEVENLABS_API_KEY="<Elevenlabs API Key>"
       ```
     - _Note:_ You might need to load this into your environment depending on your OS and shell (`source .env` or similar) if `python-dotenv` doesn't automatically pick it up when running `adk`.
 
@@ -60,11 +67,11 @@ In this project multiple agents are created to fetch news from Reddit's subreddi
     - Make sure your virtual environment (from the root directory) is activated.
     - From the `agents/reddit_scout` directory, run the agent using the ADK CLI, specifying the core code package:
       ```bash
-      adk run reddit_scout
+      adk run aync_reddit_scout
       ```
-    - Alternatively, from the project root (`adk-made-simple`), you might be able to run:
+    - Alternatively, from the project root (`Reddit-News-Agent-System-Using-MCP-and-ADK`), you might be able to run:
       ```bash
-      adk run agents/reddit_scout
+      adk run agents/async_reddit_scout
       ```
       _(Check ADK documentation for preferred discovery method)_
     - Asynchronous agents can only be run from the web view, so first `cd` into the `agents` directory and run 
@@ -76,6 +83,8 @@ In this project multiple agents are created to fetch news from Reddit's subreddi
 4.  **Interact:** The agent will start, and you can interact with it in the terminal. Try prompts like:
     - `What's the latest news?`
     - `Give me news from unrealengine`
+    - `Summarize the whole information`
+    - `Convert this whole news to speech`
 
 ## Project Structure Overview
 
