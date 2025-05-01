@@ -49,7 +49,7 @@ In this project multiple agents are created to fetch news from Reddit's subreddi
       ```bash
       cp ../.env.example .env
       ```
-    - Edit the `.env` file and add your Google AI API Key. You can obtain one from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    - Edit the `.env` file and add your Google AI API Key, Reddit Credentials and Elevenlabs API Key. You can obtain Google's Gemini API Key from [Google AI Studio](https://aistudio.google.com/app/apikey).
       ```dotenv
       GOOGLE_API_KEY=YOUR_API_KEY_HERE
       ```
@@ -100,6 +100,5 @@ Reddit News Agent MCP ADK/
 ├── .env                     # Environment variables example
 ├── .gitignore               # Root gitignore file
 ├── requirements.txt         # Project dependencies
-├── README.md                # This file (Overall Project README)
-└── PLAN.md                  # Development plan notes
+└── README.md                # This file (Overall Project README)
 ```
